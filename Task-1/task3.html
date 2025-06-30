@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users Table</title>
+</head>
+<body>
+  <div class="user_table">
+    <h1>Table of Users</h1>
+    <table border="1">
+      <thead>
+        <tr>
+    <th>Name</th>
+        <th>Age</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script>
+ 
+    function testusers(NumberOfUsers) {
+        
+     NumberOfUsers = parseInt(NumberOfUsers);
+      let users = [];
+
+      for (let i = 0; i < NumberOfUsers; i++) {
+        let name = prompt(`Enter name for user ${i + 1}`);
+        while (name.length <= 3 || name.length >= 10) {
+       name = prompt("Name must be between 4 and 9 characters. Try again:");
+        }
+
+        let age = parseInt(prompt(`Enter age for user ${i + 1}`));
+        while (isNaN(age) || age <= 10 || age >= 60) {
+             age = parseInt(prompt("Age must be between 11 and 59. Try again:"));
+        }
+
+        users.push({ name: name, age: age });
+      }
+
+      for (let i = 0; i < users.length; i++) {
+        let tr = document.createElement("tr");
+
+        let nameTd = document.createElement("td");
+        nameTd.textContent = users[i].name;
+
+        let ageTd = document.createElement("td");
+        ageTd.textContent = users[i].age;
+
+        tr.appendChild(nameTd);
+        tr.appendChild(ageTd);
+
+        document.querySelector("tbody").appendChild(tr);
+      }
+    }
+
+    let NumberOfUsers = prompt("Input the number of users");
+while (isNaN(NumberOfUsers) || NumberOfUsers <= 0) {
+  NumberOfUsers = prompt(" enter a valid number greater");
+}
+testusers(NumberOfUsers);
+
+  </script>
+</body>
+</html>
