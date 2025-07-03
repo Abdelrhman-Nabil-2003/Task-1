@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Task</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .top-image {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+
+    .top-image img,
+    .bottom-image img {
+      width: 200px;
+      height: auto;
+      border: 2px solid #333;
+      border-radius: 10px;
+    }
+
+    #nav {
+      list-style-type: square;
+      list-style-position: inside;
+      padding-left: 0;
+      text-align: left;
+      max-width: 200px;
+      margin: auto;
+    }
+
+    #nav li {
+      margin: 5px 0;
+    }
+
+    .bottom-image {
+      text-align: left;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-image" id="header">
+    <img src="./imge/dom.jpg" alt=" " />
+  </div>
+
+  <div id="navigation">
+    <ul id="nav">
+      <li><strong>Memo</strong></li>
+      <li><a href="#">Articles</a></li>
+      <li><a href="#">Photos</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Clients</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <script src="dom.js"></script>
+</body>
+</html>
